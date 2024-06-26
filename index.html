@@ -45,5 +45,16 @@
         </div>
         <p>&copy; 2024 Nombre del Club. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+  document.getElementById('googleForm').onload = function() {
+    var iframe = document.getElementById('googleForm');
+    iframe.contentWindow.onbeforeunload = function() {
+      setTimeout(function() {
+        window.location.href = "https://fwlip307.github.io/web-registros/";
+      }, 1000); // Redirige después de 1 segundo
+    };
+  };
+</script>
 </body>
 </html>
