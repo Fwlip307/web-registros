@@ -7,37 +7,28 @@
     <title>Inscribir Club de Fútbol</title>
 </head>
 <body>
-    <div class="container">
-        <h2>Inscribir Club de Fútbol</h2>
-        <form>
-            <div class="form-group">
-                <label for="club-name">Nombre del Club:</label>
-                <input type="text" id="club-name" name="club-name" required>
-            </div>
-            <div class="form-group">
-                <label for="email-adress">Correo del Club:</label>
-                <input type="text" id="email-adress" name="email-adress" required>
-            </div>
-            <div class="form-group">
-                <label for="person-in-charge">Persona a Cargo:</label>
-                <input type="text" id="person-in-charge" name="person-in-charge" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Celular:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="number-of-players">Número de Jugadores:</label>
-                <input type="number" id="number-of-players" name="number-of-players" required>
-            </div>
-            <div class="form-group">
-                <label for="origin">Lugar de Procedencia del Club:</label>
-                <input type="text" id="origin" name="origin" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Inscribir</button>
-            </div>
-        </form>
-    </div>
+    <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLScD2KG2obGAZJcWsFWZbR88Nx_CYpdamkfS957FwZ5V8oNNyA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var iframe = document.getElementById('googleForm');
+
+        iframe.onload = function() {
+          var initialHeight = iframe.contentWindow.document.body.scrollHeight;
+
+          setInterval(function() {
+            var currentHeight = iframe.contentWindow.document.body.scrollHeight;
+
+            if (currentHeight !== initialHeight) {
+              initialHeight = currentHeight;
+
+              if (currentHeight < 600) {  // Ajusta este valor si es necesario según la altura real de tu página de confirmación
+                window.location.href = "https://fwlip307.github.io/web-registros/";
+              }
+            }
+          }, 1000); // Verifica cada segundo
+        };
+      });
+    </script>
 </body>
 </html>
