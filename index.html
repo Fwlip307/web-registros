@@ -11,7 +11,7 @@
         <img src="https://via.placeholder.com/150" alt="Logo del Club">
         <nav>
             <ul>
-                <li><a href="https://forms.gle/i1zbemjTZrp21bys6">Inscribir</a></li>
+                <li><a href="inscribirse.html">Inscribir</a></li>
                 <li><a href="#">Opción 2</a></li>
                 <li><a href="#">Opción 3</a></li>
                 <li><a href="#">Opción 4</a></li>
@@ -45,30 +45,6 @@
         </div>
         <p>&copy; 2024 Nombre del Club. Todos los derechos reservados.</p>
     </footer>
-
-    <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLScD2KG2obGAZJcWsFWZbR88Nx_CYpdamkfS957FwZ5V8oNNyA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var iframe = document.getElementById('googleForm');
-
-        iframe.onload = function() {
-          var initialHeight = iframe.contentWindow.document.body.scrollHeight;
-
-          setInterval(function() {
-            var currentHeight = iframe.contentWindow.document.body.scrollHeight;
-
-            if (currentHeight !== initialHeight) {
-              initialHeight = currentHeight;
-
-              if (currentHeight < 600) {  // Ajusta este valor si es necesario según la altura real de tu página de confirmación
-                window.location.href = "https://fwlip307.github.io/web-registros/";
-              }
-            }
-          }, 1000); // Verifica cada segundo
-        };
-      });
-    </script>
 </body>
 </html>
 
